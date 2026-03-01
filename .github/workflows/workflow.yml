@@ -9,6 +9,9 @@ jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
     
+    permissions:
+      contents: write
+    
     steps:
       - name: Checkout code repository
         uses: actions/checkout@v4
