@@ -30,6 +30,7 @@ if [ ! -f "$TODAY_FILE" ] || [ ! -f "$NEXT_FILE" ]; then
     exit 1
 fi
 
+sed -i 's/Cloudflare Ray ID: <strong class="font-semibold">.*<\/strong>//g' "$TODAY_FILE" "$NEXT_FILE"
 
 if diff -w -B "$TODAY_FILE" "$NEXT_FILE"; then
     rm "$NEXT_FILE"
