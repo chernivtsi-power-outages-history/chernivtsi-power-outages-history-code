@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: chernivtsi-power-outages-history/chernivtsi-power-outages-history-timetables
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           path: chernivtsi-power-outages-history-timetables
       
 
